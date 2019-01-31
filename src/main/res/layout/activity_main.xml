@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.quran.audio.main.MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RadioGroup
+            android:id="@+id/rg_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_index"
+                style="@style/TabRadioButton"
+                android:text="index" />
+            <RadioButton
+                android:id="@+id/rb_chant"
+                style="@style/TabRadioButton"
+                android:text="chant" />
+            <RadioButton
+                android:id="@+id/rb_teach"
+                style="@style/TabRadioButton"
+                android:text="teach" />
+            <RadioButton
+                android:id="@+id/rb_read"
+                style="@style/TabRadioButton"
+                android:text="read" />
+            <RadioButton
+                android:id="@+id/rb_worship"
+                style="@style/TabRadioButton"
+                android:text="worship" />
+        </RadioGroup>
+        <FrameLayout
+            android:id="@+id/fl_layout"
+            android:layout_above="@+id/rg_nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+
+    <!--放在最后，否则无法拖拽关闭-->
+    <include
+        android:id="@+id/ll_side"
+        layout="@layout/drawerlayout_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        />
+</android.support.v4.widget.DrawerLayout>
